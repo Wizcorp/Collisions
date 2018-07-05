@@ -1,17 +1,10 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
-	entry : './demo/index.mjs',
-
-	plugins : [
-		new HtmlWebpackPlugin({
-			filename : 'index.html',
-			title    : 'Collisions - Collision detection for circles, polygons, and points',
-		}),
-	],
+	entry : './src/Collisions.mjs',
 
 	output : {
-		path     : `${__dirname}/docs/demo/`,
+		path     : `${__dirname}/lib`,
 		filename : 'index.js',
-	},
+		library: 'collisions',
+		libraryTarget: 'umd'
+	}
 };
